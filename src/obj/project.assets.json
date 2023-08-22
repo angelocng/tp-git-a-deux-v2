@@ -8,25 +8,25 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\grognone\\.nuget\\packages\\": {},
+    "C:\\Users\\dcravo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\grognone\\Desktop\\SaveCda\\tp-git-a-deux\\src\\src.csproj",
+      "projectUniqueName": "C:\\Users\\dcravo\\Documents\\GitHub\\tp-git-a-deux\\src\\src.csproj",
       "projectName": "src",
-      "projectPath": "C:\\Users\\grognone\\Desktop\\SaveCda\\tp-git-a-deux\\src\\src.csproj",
-      "packagesPath": "C:\\Users\\grognone\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\grognone\\Desktop\\SaveCda\\tp-git-a-deux\\src\\obj\\",
+      "projectPath": "C:\\Users\\dcravo\\Documents\\GitHub\\tp-git-a-deux\\src\\src.csproj",
+      "packagesPath": "C:\\Users\\dcravo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dcravo\\Documents\\GitHub\\tp-git-a-deux\\src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\grognone\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dcravo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
