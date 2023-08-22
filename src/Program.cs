@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿string name;
+string surname;
+Console.WriteLine("Veuillez saisir votre nom et votre prenom svp.");
+name = Console.ReadLine();
+surname = Console.ReadLine();
+Console.WriteLine( name +" "+ surname);
