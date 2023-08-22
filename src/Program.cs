@@ -1,4 +1,9 @@
-﻿Console.WriteLine("Veuillez saisir votre nom et votre prenom svp.");
-personne1 = new Person;
-personne1 = Console.ReadLine();
-Console.WriteLine(personne1);
+﻿using System;
+using src;
+
+Console.WriteLine("Veuillez saisir votre nom et votre prenom svp.");
+string Firstname = Console.ReadLine();
+string Lastname = Console.ReadLine();
+Console.WriteLine(Firstname +" "+  Lastname);
+
+
