@@ -63,7 +63,7 @@ Console.WriteLine(peopleContainer.ToString());
 peopleContainer.SortByFirstName();
 Console.WriteLine(peopleContainer.ToString());
 
-string jsonString = JsonSerializer.Serialize(peopleContainer);
+string jsonString = JsonSerializer.Serialize(peopleContainer.SortByFirstName());
 
 File.WriteAllText("MonFichierJson", jsonString);
 
