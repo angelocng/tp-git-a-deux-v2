@@ -1,5 +1,6 @@
 ﻿using System;
 using src;
+using System.Text.Json;
 
 //niveau etape 3
 // Console.WriteLine("Veuillez saisir votre nom et votre prenom svp.");
@@ -62,6 +63,9 @@ Console.WriteLine(peopleContainer.ToString());
 peopleContainer.SortByFirstName();
 Console.WriteLine(peopleContainer.ToString());
 
+string jsonString = JsonSerializer.Serialize(peopleContainer);
+
+File.WriteAllText("MonFichierJson", jsonString);
 
 
 
