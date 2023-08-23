@@ -8,14 +8,6 @@ namespace src
 {
     public class PeopleContainer : IPersonContainer
     {
-
-        private List<Person> myListPerson = new List<Person>();
-
-        /* public PeopleContainer(List<Person> _myListPerson)
-        {
-            this.myListPerson = _myListPerson;
-        } */
-
         private List<Person> myListPerson;
 
         public PeopleContainer(){
@@ -27,7 +19,6 @@ namespace src
            List<Person> people = myListPerson.OrderBy(person=> person.Lastname).ToList();
            return people; 
         }
-
 
         public List<Person> SortByFirstName()
         {
@@ -43,7 +34,7 @@ namespace src
         {
             string myString = "Your list contain : \n";
             foreach(Person person in myListPerson){
-                myString += person.ToString();
+                myString += person.ToString()+"\n";
             }
             return myString;
         }
