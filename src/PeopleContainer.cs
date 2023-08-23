@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,18 +18,27 @@ namespace src
 
         public List<Person> SortByLastName()
         {
-           List<Person> people = myListPerson.OrderBy(person=> person.Lastname).ToList();
-           return people; 
+           myListPerson = myListPerson.OrderBy(person=> person.Lastname).ToList();
+           return myListPerson; 
         }
 
         public List<Person> SortByFirstName()
         {
-           List<Person> people = myListPerson.OrderBy(person=> person.Firstname).ToList();
-           return people; 
+           myListPerson = myListPerson.OrderBy(person=> person.Firstname).ToList();
+           return myListPerson; 
         }
 
-        public void AddPerson(Person _person){
-            myListPerson.Add(_person);
+        public bool AddPerson(Person _person){
+
+            Person? person = myListPerson.FirstOrDefault(p => p.Lastname == _person.Lastname && p.Firstname == _person.Firstname);
+
+            if(person is Person) {
+                return false;
+            }
+            else {
+                myListPerson.Add(_person);
+                return true;
+            }
         }
 
         public override string ToString()
@@ -38,5 +49,7 @@ namespace src
             }
             return myString;
         }
+
+        
     }
 }

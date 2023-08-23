@@ -22,33 +22,42 @@ using src;
 // Console.WriteLine(myPeopleString);
 
 //niveau etape 7
-Person myPerson = new Person();
+Person myPerson;
 PeopleContainer peopleContainer = new PeopleContainer();
 string FirstnameUser;
 string LastnameUser;
 do
 {
 Console.WriteLine("Veuillez saisir votre nom et votre prenom svp.");
-FirstnameUser = Console.ReadLine();
 LastnameUser = Console.ReadLine();
 
 
-if(FirstnameUser !="q" && LastnameUser!="q")
-{
-string myPersonString = myPerson.ToString();
-Console.WriteLine(myPersonString);
-peopleContainer.AddPerson(new Person() { Lastname = LastnameUser, Firstname = FirstnameUser});
-}
+    if(
+        LastnameUser!="q"
+        )
+    {
+        FirstnameUser = Console.ReadLine();
+        myPerson = new Person(LastnameUser,FirstnameUser);
+        string myPersonString = myPerson.ToString();
+        Console.WriteLine(myPersonString);
+        peopleContainer.AddPerson(myPerson);
+        // Si constructeur non implémenté
+        // peopleContainer.AddPerson(new Person() { Lastname = LastnameUser, Firstname = FirstnameUser});
+    }
 
 }
 while
 (
-    FirstnameUser != "q" || LastnameUser != "q"
+    LastnameUser != "q"
 );
 string myPeopleString = peopleContainer.ToString();
 Console.WriteLine(myPeopleString);
 
+peopleContainer.SortByLastName();
+Console.WriteLine(peopleContainer.ToString());
 
+peopleContainer.SortByFirstName();
+Console.WriteLine(peopleContainer.ToString());
 
 
 
