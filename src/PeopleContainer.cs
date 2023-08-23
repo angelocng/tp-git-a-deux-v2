@@ -8,7 +8,6 @@ namespace src
 {
     public class PeopleContainer : IPersonContainer
     {
-
         private List<Person> myListPerson = new List<Person>();
 
         public PeopleContainer(List<Person> _myListPerson)
@@ -23,9 +22,8 @@ namespace src
         }
 
 
-         public List<Person> SortByFirstName()
+        public List<Person> SortByFirstName()
         {
-            
            List<Person> people = myListPerson.OrderBy(person=> person.Firstname).ToList();
            return people; 
         }
