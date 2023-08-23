@@ -13,7 +13,7 @@ namespace src
         public string? Lastname { get ; set; }
 
         public Person(){}
-        public Person(string _firstname, string _lastname){
+        public Person(string? _firstname, string? _lastname){
             this.Firstname = _firstname;
             this.Lastname = _lastname;
         }
