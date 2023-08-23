@@ -14,5 +14,8 @@ namespace src
         public string Firstname{ get ; set; }
         public string Lastname { get ; set; }
 
+        public override string ToString(){
+            return $"Your lastname is {Lastname} and your firstname is {Firstname}";
+        }
     }
 }
