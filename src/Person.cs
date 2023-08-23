@@ -9,8 +9,8 @@ namespace src
     public class Person
     {
 
-        public string Firstname{ get ; set; }
-        public string Lastname { get ; set; }
+        public string? Firstname{ get ; set; }
+        public string? Lastname { get ; set; }
 
         public Person(){}
         public Person(string _firstname, string _lastname){
