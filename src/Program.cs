@@ -24,6 +24,9 @@ using src;
 //niveau etape 7
 Person myPerson;
 PeopleContainer peopleContainer = new PeopleContainer();
+peopleContainer.AddPerson(new Person ("Marcel","Cerdan"));
+peopleContainer.AddPerson(new Person("Jackie","Hicx"));
+peopleContainer.AddPerson(new Person("James", "Dean"));
 string FirstnameUser;
 string LastnameUser;
 do
