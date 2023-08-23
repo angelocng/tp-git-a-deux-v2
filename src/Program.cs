@@ -29,21 +29,29 @@ string LastnameUser;
 do
 {
 Console.WriteLine("Veuillez saisir votre nom et votre prenom svp.");
-FirstnameUser = Console.ReadLine();
 LastnameUser = Console.ReadLine();
+FirstnameUser = Console.ReadLine();
 
 
-if(FirstnameUser !="q" && LastnameUser!="q")
+if(
+    // FirstnameUser !="q"
+    // ||
+    LastnameUser!="q"
+    )
 {
 string myPersonString = myPerson.ToString();
 Console.WriteLine(myPersonString);
-peopleContainer.AddPerson(new Person() { Lastname = LastnameUser, Firstname = FirstnameUser});
+// Si constructeur non implémenté
+// peopleContainer.AddPerson(new Person() { Lastname = LastnameUser, Firstname = FirstnameUser});
+peopleContainer.AddPerson(new Person(LastnameUser,FirstnameUser));
 }
 
 }
 while
 (
-    FirstnameUser != "q" || LastnameUser != "q"
+    // FirstnameUser != "q" 
+    // || 
+    LastnameUser != "q"
 );
 string myPeopleString = peopleContainer.ToString();
 Console.WriteLine(myPeopleString);
