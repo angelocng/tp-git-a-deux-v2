@@ -8,11 +8,18 @@ namespace src
 {
     public class PeopleContainer : IPersonContainer
     {
+
         private List<Person> myListPerson = new List<Person>();
 
-        public PeopleContainer(List<Person> _myListPerson)
+        /* public PeopleContainer(List<Person> _myListPerson)
         {
             this.myListPerson = _myListPerson;
+        } */
+
+        private List<Person> myListPerson;
+
+        public PeopleContainer(){
+            myListPerson = new List<Person>();
         }
 
         public List<Person> SortByLastName()
@@ -26,6 +33,19 @@ namespace src
         {
            List<Person> people = myListPerson.OrderBy(person=> person.Firstname).ToList();
            return people; 
+        }
+
+        public void AddPerson(Person _person){
+            myListPerson.Add(_person);
+        }
+
+        public override string ToString()
+        {
+            string myString = "Your list contain : \n";
+            foreach(Person person in myListPerson){
+                myString += person.ToString();
+            }
+            return myString;
         }
     }
 }
