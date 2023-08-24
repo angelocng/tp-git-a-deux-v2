@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/pjByqalTTKg3pQYp16zW6NQXjJ57T9klYuUBKA45SE7AAmQXdknecZlaIbVRiT7cH+wszIdEhd3Sv+idJAvIg==",
+  "dgSpecHash": "0rePUqQBAzWFFvhF6g88KTkcojRXdlaQFK/Vq3n8uGLa2npnqKmfwhq/lLO15THN2/sdfZsEqwzTSoOC8mRl8w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\CRM\\Documents\\GitHub\\tp-git-a-deux-v2\\src\\DavGe.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\rbounatirou\\Documents\\GIT\\tp-git-a-deux-v2\\src\\DavGe.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rbounatirou\\.nuget\\packages\\system.diagnostics.eventlog\\7.0.0\\system.diagnostics.eventlog.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
