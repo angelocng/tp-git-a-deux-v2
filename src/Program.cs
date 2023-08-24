@@ -34,6 +34,9 @@ string? LastnameUser;
 do
 {
 Console.WriteLine("Veuillez saisir votre nom et votre prenom svp.");
+
+
+
 LastnameUser = Console.ReadLine();
 
 
