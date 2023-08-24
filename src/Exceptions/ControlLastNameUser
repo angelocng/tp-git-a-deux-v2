@@ -1,7 +1,0 @@
-
-  public static bool ControlLastNameUser(string LastnameUser)
-        {
-            return Regex.Match(nom_text, @"^[A-Za-zàâÂäÄéÉèÈêÊëËîÎïÏôÔöÖèùÙûÛüÜ\s\-]{0,40}$").Success;
-        }
-
- 
