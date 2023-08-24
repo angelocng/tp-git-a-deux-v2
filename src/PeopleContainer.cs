@@ -46,12 +46,16 @@ namespace src
                 {
 
                 }
-                else 
+                else if(myListPerson.Count()>=10)
+                {
+                     throw new MoreThanTenRegisteredPerson("Il y a déjà 10 utilisateurs enregistrés, merci de contacter le service informatique.");
+                }
+                }
+                else
                 {
                     myListPerson.Add(_person);
-                }
+                }  
             }
-            
         }
 
         public override string ToString()
