@@ -50,9 +50,6 @@ LastnameUser = Console.ReadLine();
         Console.WriteLine(myPersonString);
         peopleContainer.AddPerson(myPerson);
 
-        if(peopleContainer.AddPerson(myPerson)) {
-            
-        }
         // Si constructeur non implémenté
         // peopleContainer.AddPerson(new Person() { Lastname = LastnameUser, Firstname = FirstnameUser});
     }
