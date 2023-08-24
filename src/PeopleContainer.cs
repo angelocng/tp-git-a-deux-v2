@@ -36,8 +36,15 @@ namespace src
                 return false;
             }
             else {
-                myListPerson.Add(_person);
-                return true;
+                if(myListPerson.Count()<10)
+                {
+                    myListPerson.Add(_person);
+                    return true;
+                }
+                else
+                {
+                    throw new MoreThanTenRegisteredPerson("Il y a déjà 10 utilisateurs enregistrés, merci de contacter le service informatique.");
+                }
             }
         }
 
