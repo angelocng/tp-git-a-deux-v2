@@ -30,9 +30,13 @@ peopleContainer.AddPerson(new Person("Jackie","Hicx"));
 peopleContainer.AddPerson(new Person("James", "Dean"));
 string? FirstnameUser;
 string? LastnameUser;
+
 do
 {
 Console.WriteLine("Veuillez saisir votre nom et votre prenom svp.");
+
+
+
 LastnameUser = Console.ReadLine();
 
 
