@@ -12,7 +12,7 @@ public static class CheckString
     /// <exception cref="InvalidStringLengthException"></exception>
     public static void CheckLastNameLength(string _toCheck)
     {
-        if (_toCheck.Length < 2 && _toCheck.Length > 50)
+        if (_toCheck.Length < 2 || _toCheck.Length > 50)
         {
             throw new InvalidStringLengthException();
         }
