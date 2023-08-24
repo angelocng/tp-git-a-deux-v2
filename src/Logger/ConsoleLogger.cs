@@ -12,7 +12,7 @@ namespace DavGe.Logger
         {
             this.Write(message);
         }
-        internal override void Write(string message)
+        protected override void Write(string message)
         {
             Console.WriteLine(message);
         }
