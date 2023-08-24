@@ -28,11 +28,14 @@ namespace src
            return myListPerson; 
         }
 
+        // Convertir cette méthode pour gérer les erreurs
+        // 1. Vérifier que _person n'est pas null et gérer l'exception
+        // 2. doublon avec une Exception
         public bool AddPerson(Person _person){
 
             Person? person = myListPerson.FirstOrDefault(p => p.Lastname == _person.Lastname && p.Firstname == _person.Firstname);
 
-            if(person is Person) {
+            if(person is Person myPerson) {
                 return false;
             }
             else {
