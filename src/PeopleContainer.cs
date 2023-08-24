@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using src.Exceptions;
 
 namespace src
 {
@@ -28,23 +29,32 @@ namespace src
            return myListPerson; 
         }
 
-        public bool AddPerson(Person _person){
+        // Convertir cette méthode pour gérer les erreurs
+        // 1. Vérifier que _person n'est pas null et gérer l'exception
+        // 2. doublon avec une Exception
+        public void AddPerson(Person _person){
 
-            Person? person = myListPerson.FirstOrDefault(p => p.Lastname == _person.Lastname && p.Firstname == _person.Firstname);
-
-            if(person is Person) {
-                return false;
+            if(_person==null)
+            {
+                throw new InvalidPersonException();
             }
-            else {
-                if(myListPerson.Count()<10)
+            else
+            {
+                Person? person = myListPerson.FirstOrDefault(p => p.Lastname == _person.Lastname && p.Firstname == _person.Firstname);
+
+                if(person is Person myPerson) 
                 {
-                    myListPerson.Add(_person);
-                    return true;
+
+                }
+                else if(myListPerson.Count()>=10)
+                {
+                     throw new MoreThanTenRegisteredPerson("Il y a déjà 10 utilisateurs enregistrés, merci de contacter le service informatique.");
+                }
                 }
                 else
                 {
-                    throw new MoreThanTenRegisteredPerson("Il y a déjà 10 utilisateurs enregistrés, merci de contacter le service informatique.");
-                }
+                    myListPerson.Add(_person);
+                }  
             }
         }
 

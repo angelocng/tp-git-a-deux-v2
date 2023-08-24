@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace src
 {
+    // gérer le format du nom et prénom avec Exceptions
     public class Person
     {
+        private string _lastname;
+        private string _firstname;
 
-        public string? Firstname{ get ; set; }
-        public string? Lastname { get ; set; }
+        public string? Firstname { get { return _firstname; } set { _firstname = value; } }
+        public string? Lastname { get { return _lastname; } set { _lastname = value; } }
 
         public Person(){}
         public Person(string? _firstname, string? _lastname){

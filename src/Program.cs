@@ -30,6 +30,7 @@ peopleContainer.AddPerson(new Person("Jackie","Hicx"));
 peopleContainer.AddPerson(new Person("James", "Dean"));
 string? FirstnameUser;
 string? LastnameUser;
+
 do
 {
 Console.WriteLine("Veuillez saisir votre nom et votre prenom svp.");
@@ -45,6 +46,10 @@ LastnameUser = Console.ReadLine();
         string myPersonString = myPerson.ToString();
         Console.WriteLine(myPersonString);
         peopleContainer.AddPerson(myPerson);
+
+        if(peopleContainer.AddPerson(myPerson)) {
+            
+        }
         // Si constructeur non implémenté
         // peopleContainer.AddPerson(new Person() { Lastname = LastnameUser, Firstname = FirstnameUser});
     }
