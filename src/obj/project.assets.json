@@ -8,25 +8,25 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\grognone\\.nuget\\packages\\": {},
+    "C:\\Users\\nferrand\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\grognone\\Desktop\\SaveCda\\tp-git-a-deux\\src\\DavGe.csproj",
+      "projectUniqueName": "C:\\Users\\nferrand\\Desktop\\CDA_Ex\\excercice Github\\tp-git-a-deux-v2\\src\\DavGe.csproj",
       "projectName": "DavGe",
-      "projectPath": "C:\\Users\\grognone\\Desktop\\SaveCda\\tp-git-a-deux\\src\\DavGe.csproj",
-      "packagesPath": "C:\\Users\\grognone\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\grognone\\Desktop\\SaveCda\\tp-git-a-deux\\src\\obj\\",
+      "projectPath": "C:\\Users\\nferrand\\Desktop\\CDA_Ex\\excercice Github\\tp-git-a-deux-v2\\src\\DavGe.csproj",
+      "packagesPath": "C:\\Users\\nferrand\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nferrand\\Desktop\\CDA_Ex\\excercice Github\\tp-git-a-deux-v2\\src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\grognone\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nferrand\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -68,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

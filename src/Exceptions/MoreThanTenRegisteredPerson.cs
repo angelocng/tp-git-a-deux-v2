@@ -3,7 +3,7 @@ namespace src
     [Serializable]
     public class MoreThanTenRegisteredPerson : Exception 
     { 
-        private string PersonName {get;}
+        private string personName { get; set; }
         public MoreThanTenRegisteredPerson(){}
         public MoreThanTenRegisteredPerson(string message) : base (message)
         {
@@ -14,7 +14,7 @@ namespace src
 
         public MoreThanTenRegisteredPerson(string message, string personName) : this (message)
         {
-            PersonName = personName;
+            this.personName = personName;
         }
     }
 }
