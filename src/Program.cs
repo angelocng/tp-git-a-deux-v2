@@ -13,6 +13,9 @@ string? LastnameUser;
 do
 {
 Console.WriteLine("Veuillez saisir votre nom et votre prenom svp.");
+
+
+
 LastnameUser = Console.ReadLine();
 
 
@@ -30,7 +33,10 @@ LastnameUser = Console.ReadLine();
             Console.WriteLine(ex.Message);
             // TODO:  LOGGER l'erreur !
         }
+
         
+        // Si constructeur non implémenté
+        // peopleContainer.AddPerson(new Person() { Lastname = LastnameUser, Firstname = FirstnameUser});
     }
 
 }

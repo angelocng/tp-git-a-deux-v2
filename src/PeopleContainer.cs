@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
+using src.Exceptions;
 
 namespace src
 {
@@ -32,12 +33,25 @@ namespace src
         // 1. Vérifier que _person n'est pas null et gérer l'exception
         // 2. doublon avec une Exception
         public void AddPerson(Person _person){
-            Person? person = myListPerson.FirstOrDefault(p => p.Lastname == _person.Lastname && p.Firstname == _person.Firstname);
-            if(person is Person) {
-                throw new DoublonsException();
-            } else {
-                myListPerson.Add(_person);
+
+            if(myListPerson.Count()>=10)
+            {
+                throw new MoreThanTenRegisteredPerson("Il y a déjà 10 utilisateurs enregistrés, merci de contacter le service informatique.");
             }
+
+            if(_person==null)
+            {
+                throw new InvalidPersonException();
+            }
+
+            Person? person = myListPerson.FirstOrDefault(p => p.Lastname == _person.Lastname && p.Firstname == _person.Firstname);
+            
+            if(person is Person myPerson) 
+            {
+                throw new DoublonsException();
+            }
+                
+            myListPerson.Add(_person);           
         }
 
         public override string ToString()
