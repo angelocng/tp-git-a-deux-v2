@@ -1,28 +1,12 @@
-﻿using System;
+using System;
 using src;
 using System.Text.Json;
+using DavGe;
 
-//niveau etape 3
-// Console.WriteLine("Veuillez saisir votre nom et votre prenom svp.");
-// string FirstnameUser = Console.ReadLine();
-// string LastnameUser = Console.ReadLine();
-//Console.WriteLine(FirstnameUser +" "+  LastnameUser);
 
-//niveau etape 4
-// Person myPerson = new Person();
-// myPerson.Firstname = FirstnameUser;
-// myPerson.Lastname = LastnameUser;
-// string myPersonString = myPerson.ToString();
-// Console.WriteLine(myPersonString);
+ErrorLogger DEBUG = new ErrorLogger();
+DEBUG.LogMessage($"[{DateTime.Now}] {Environment.UserName}");
 
-//niveau etape 6
-// PeopleContainer peopleContainer = new PeopleContainer();
-
-// peopleContainer.AddPerson(myPerson);
-// string myPeopleString = peopleContainer.ToString();
-// Console.WriteLine(myPeopleString);
-
-//niveau etape 7
 Person myPerson;
 PeopleContainer peopleContainer = new PeopleContainer();
 peopleContainer.AddPerson(new Person ("Marcel","Cerdan"));
@@ -40,28 +24,28 @@ Console.WriteLine("Veuillez saisir votre nom et votre prenom svp.");
 LastnameUser = Console.ReadLine();
 
 
-    if(
-        LastnameUser!="q"
-        )
+    if(LastnameUser!="q")
     {
         FirstnameUser = Console.ReadLine();
         myPerson = new Person(LastnameUser,FirstnameUser);
         string myPersonString = myPerson.ToString();
         Console.WriteLine(myPersonString);
-        peopleContainer.AddPerson(myPerson);
-
-        if(peopleContainer.AddPerson(myPerson)) {
-            
+        try 
+        {
+            peopleContainer.AddPerson(myPerson);
+        } catch(DoublonsException ex) 
+        {
+            Console.WriteLine(ex.Message);
+            // TODO:  LOGGER l'erreur !
         }
+
+        
         // Si constructeur non implémenté
         // peopleContainer.AddPerson(new Person() { Lastname = LastnameUser, Firstname = FirstnameUser});
     }
 
 }
-while
-(
-    LastnameUser != "q"
-);
+while (LastnameUser != "q");
 string myPeopleString = peopleContainer.ToString();
 Console.WriteLine(myPeopleString);
 

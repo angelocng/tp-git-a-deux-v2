@@ -34,28 +34,24 @@ namespace src
         // 2. doublon avec une Exception
         public void AddPerson(Person _person){
 
+            if(myListPerson.Count()>=10)
+            {
+                throw new MoreThanTenRegisteredPerson("Il y a déjà 10 utilisateurs enregistrés, merci de contacter le service informatique.");
+            }
+
             if(_person==null)
             {
                 throw new InvalidPersonException();
             }
-            else
+
+            Person? person = myListPerson.FirstOrDefault(p => p.Lastname == _person.Lastname && p.Firstname == _person.Firstname);
+            
+            if(person is Person myPerson) 
             {
-                Person? person = myListPerson.FirstOrDefault(p => p.Lastname == _person.Lastname && p.Firstname == _person.Firstname);
-
-                if(person is Person myPerson) 
-                {
-
-                }
-                else if(myListPerson.Count()>=10)
-                {
-                     throw new MoreThanTenRegisteredPerson("Il y a déjà 10 utilisateurs enregistrés, merci de contacter le service informatique.");
-                }
-                }
-                else
-                {
-                    myListPerson.Add(_person);
-                }  
+                throw new DoublonsException();
             }
+                
+            myListPerson.Add(_person);           
         }
 
         public override string ToString()
