@@ -1,6 +1,11 @@
-﻿using System;
+using System;
 using src;
 using System.Text.Json;
+using DavGe;
+
+
+ErrorLogger DEBUG = new ErrorLogger();
+DEBUG.LogMessage($"[{DateTime.Now}] {Environment.UserName}");
 
 Person myPerson;
 PeopleContainer peopleContainer = new PeopleContainer();
