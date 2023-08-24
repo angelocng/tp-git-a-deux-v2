@@ -3,9 +3,9 @@ namespace src.Tools
 {
     public class Control
     {
-        public static bool ControlLastNameUser(string LastnameUser)
+        public static bool ControlNameUser(string nameUser)
         {
-            return Regex.Match(LastnameUser, @"^[\p{L}\-]{1,40}$").Success;
+            return Regex.Match(nameUser, @"^[\p{L}\-]{1,40}$").Success;
         }
     }
 }
