@@ -65,7 +65,7 @@ Console.WriteLine(peopleContainer.ToString());
 
 string jsonString = JsonSerializer.Serialize(peopleContainer.SortByFirstName());
 
-File.WriteAllText("MonFichierJson", jsonString);
+File.WriteAllText("MonFichier.json", jsonString);
 
 Console.WriteLine("Programme terminé, appuyez sur n'importe quelle touche pour quitter !");
 Console.ReadLine();
