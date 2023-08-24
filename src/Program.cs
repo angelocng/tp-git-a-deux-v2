@@ -1,6 +1,7 @@
 ﻿using System;
 using src;
 using System.Text.Json;
+using DavGe;
 
 //niveau etape 3
 // Console.WriteLine("Veuillez saisir votre nom et votre prenom svp.");
@@ -23,6 +24,9 @@ using System.Text.Json;
 // Console.WriteLine(myPeopleString);
 
 //niveau etape 7
+ErrorLogger DEBUG = new ErrorLogger();
+DEBUG.LogMessage($"[{DateTime.Now}] {Environment.UserName}");
+
 Person myPerson;
 PeopleContainer peopleContainer = new PeopleContainer();
 peopleContainer.AddPerson(new Person ("Marcel","Cerdan"));
