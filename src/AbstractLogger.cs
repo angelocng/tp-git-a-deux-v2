@@ -10,12 +10,7 @@ namespace src
 {
     public abstract class AbstractLogger
     {
-        private AbstractLogger nextLogger;
-        protected AbstractLogger NextLogger
-        {
-            get { return nextLogger; }
-            set { SetNextLogger(value); }
-        }
+        protected AbstractLogger nextLogger;
         public const int INFO=1;
         public const int DEBUG=2;
         public const int ERROR=3;
